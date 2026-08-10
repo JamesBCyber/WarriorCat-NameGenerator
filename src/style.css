@@ -1,0 +1,100 @@
+/* Base Layout & Typography */
+:root {
+    --bg-color: #1a1e1b;
+    --card-bg: #262c28;
+    --accent-color: #4a7c59;
+    --accent-hover: #5b996e;
+  
+    /* Palette shifted from white to light yellow tones */
+    --text-main: #fcf8e3;      /* Light warm yellow */
+    --text-accent: #5b996e;    /* Soft golden yellow for prefix */
+    --text-alt: #f5e08c;    /* Soft golden yellow for prefix */
+    --text-button: #faf5d9;    /* Light creamy yellow for button text */
+    --border-radius: 12px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-main);
+}
+
+/* App Container */
+#app, body {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--text-main);
+}
+
+/* Name Display Box */
+.displayName {
+    background-color: var(--card-bg);
+    padding: 1.5rem 2.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(252, 248, 227, 0.1); /* Subtle light yellow border tint */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    display: inline-flex;
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayName span {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* Accent highlight on the Prefix */
+#prefixText {
+    color: var(--text-accent);
+    text-transform: capitalize;
+}
+#suffixText {
+    color: var(--text-alt);
+    text-transform: lowercase;
+}
+
+/* Button Container (Side-by-side layout) */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Reroll Buttons */
+.reroll-btn {
+    background-color: var(--accent-color);
+    color: var(--text-button);
+    border: none;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(74, 124, 89, 0.3);
+}
+
+.reroll-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(91, 153, 110, 0.4);
+}
+
+.reroll-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(74, 124, 89, 0.3);
+}
