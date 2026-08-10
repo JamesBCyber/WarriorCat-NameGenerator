@@ -4,6 +4,7 @@
     --card-bg: #262c28;
     --accent-color: #4a7c59;
     --accent-hover: #5b996e;
+    --accent-disabled: #2e3d33;
   
     /* Palette shifted from white to light yellow tones */
     --text-main: #fcf8e3;      /* Light warm yellow */
@@ -95,6 +96,12 @@ h1 {
 }
 
 .reroll-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(74, 124, 89, 0.3);
+}
+
+.reroll-btn:disabled {
+    background-color: var(--accent-disabled);
     transform: translateY(0);
     box-shadow: 0 2px 8px rgba(74, 124, 89, 0.3);
 }
